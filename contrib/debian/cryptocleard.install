@@ -1,0 +1,2 @@
+debian/bin/boostcoind usr/bin
+src/boostcoind usr/lib/boostcoin
