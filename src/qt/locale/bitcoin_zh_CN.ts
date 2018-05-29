@@ -2747,8 +2747,8 @@ alertnotify=echo %%s | mail -s &quot;boostcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>Listen for connections on &lt;port&gt; (default: 8895 or testnet: 18895)</source>
-        <translation>监听&lt;port&gt;端口的连接 (默认: 8895 测试网: 18895)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 9657 or testnet: 19657)</source>
+        <translation>监听&lt;port&gt;端口的连接 (默认: 9657 测试网: 19657)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2797,8 +2797,8 @@ alertnotify=echo %%s | mail -s &quot;boostcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+62"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8896 or testnet: 18896)</source>
-        <translation>监听 &lt;port&gt; 端口的JSON-RPC连接 (默认: 8896 测试网: 18896)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9658 or testnet: 19658)</source>
+        <translation>监听 &lt;port&gt; 端口的JSON-RPC连接 (默认: 9658 测试网: 19658)</translation>
     </message>
     <message>
         <location line="-16"/>

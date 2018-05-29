@@ -20,7 +20,7 @@ struct SeedSpec6 {
 
 #include "chainparamsseeds.h"
 
-int64_t genTime = 1400512373;
+int64_t genTime = 1527627946;
 
 void MineGenesis(CBlock genesis){
     // This will figure out a valid hash and Nonce if you're creating a different genesis block:
@@ -78,15 +78,15 @@ public:
         pchMessageStart[2] = 0x22;
         pchMessageStart[3] = 0x05;
         vAlertPubKey = ParseHex("04cd446c44e90cfddbde18bcd7cd8c4aca0076954e3a60a3bb5e78316b8a6ae5609b8d0023cd80b7618f99cb9250a87e2de3a10ced08d384b56a94227a098a47c3");
-        nDefaultPort = 9697;
-        nRPCPort = 9698;
+        nDefaultPort = 9657;
+        nRPCPort = 9658;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
         //
 
-        const char* pszTimestamp = "x13 BoostCoin to Mars!... Again!";
+        const char* pszTimestamp = "Boost, new generation crypto technology | New chain for a new future!";
         std::vector<CTxIn> vin;
         vin.resize(1);
         vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -120,6 +120,7 @@ public:
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
         nLastPOWBlock = 100000000;
+        nPOSStartBlock = 1000;
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }
@@ -152,8 +153,8 @@ public:
         pchMessageStart[3] = 0x05;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
         vAlertPubKey = ParseHex("0495c366b3dc2986b8669858743cecdcb4f0749c6c23cc1e94d77a1a5b289a2f81f3613273a2aa8c8b2ebd19caab8785492ba98c33d9336472f627f5963b65e14d");
-        nDefaultPort = 19697;
-        nRPCPort = 19697;
+        nDefaultPort = 19657;
+        nRPCPort = 19657;
         strDataDir = "testnet";
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
@@ -162,7 +163,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb"));
 
-        vFixedSeeds.clear();
+//        vFixedSeeds.clear();
 //        vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("testnode01.bost.link",  "testnode01.bost.link"));
 
@@ -196,7 +197,7 @@ public:
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce = 1313422;
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 29697;
+        nDefaultPort = 29657;
         strDataDir = "regtest";
 //        MineGenesis(genesis); // mine the genesis block only, disable after solved
         assert(hashGenesisBlock == uint256("0x00000b76f20c81ad1ac9c8a5fc14547a5f8c3305108424ffced60ccbbf09a904"));
