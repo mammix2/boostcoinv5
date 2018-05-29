@@ -110,6 +110,14 @@ public:
         vSeeds.push_back(CDNSSeedData("node1.bost.link",  "node1.bost.link"));
         vSeeds.push_back(CDNSSeedData("node2.bost.link",  "node2.bost.link"));
         vSeeds.push_back(CDNSSeedData("node3.bost.link",  "node3.bost.link"));
+        vSeeds.push_back(CDNSSeedData("node1.ffptech.com",  "node1.ffptech.com"));
+        vSeeds.push_back(CDNSSeedData("node2.ffptech.com",  "node2.ffptech.com"));
+        vSeeds.push_back(CDNSSeedData("node3.ffptech.com",  "node3.ffptech.com"));
+        vSeeds.push_back(CDNSSeedData("node1.myboost.io",  "node1.myboost.io"));
+        vSeeds.push_back(CDNSSeedData("node2.myboost.io",  "node2.myboost.io"));
+        vSeeds.push_back(CDNSSeedData("node3.myboost.io",  "node3.myboost.io"));
+
+
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
