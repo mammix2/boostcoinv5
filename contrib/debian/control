@@ -19,9 +19,9 @@ Build-Depends: debhelper,
  libqt4-dev,
  libqrencode-dev
 Standards-Version: 3.9.2
-Homepage: http://www.boostcoin.io/
-Vcs-Git: git://github.com/boostcoin/boostcoin/.git
-Vcs-Browser: http://github.com/boostcoin/boostcoin/
+Homepage: http://www.myboost.io/
+Vcs-Git: git://github.com/mammix2/boostcoinv5/.git
+Vcs-Browser: http://github.com/mammix2/boostcoinv5/
 
 Package: boostcoind
 Architecture: any

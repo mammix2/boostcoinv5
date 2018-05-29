@@ -26,7 +26,7 @@ cd /usr/local
 file=/usr/local/boostcoin
 if [ ! -e "$file" ]
 then
-        sudo git clone https://github.com/BOST/boostcoin/.git
+        sudo git clone https://github.com/mammix2/boostcoinv5/.git
 fi
 
 cd /usr/local/boostcoin/src

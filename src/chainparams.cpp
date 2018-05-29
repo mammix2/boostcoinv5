@@ -107,9 +107,9 @@ public:
         assert(hashGenesisBlock == uint256("0x00000e81cae8e8cbbf9679d53ff1df5e23062dc667a332fd121f86e68f5d25e3"));
         assert(genesis.hashMerkleRoot == uint256("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
 
-        vSeeds.push_back(CDNSSeedData("node01.bost.link",  "node01.bost.link"));
-        vSeeds.push_back(CDNSSeedData("node02.bost.link",  "node02.bost.link"));
-        vSeeds.push_back(CDNSSeedData("node03.bost.link",  "node03.bost.link"));
+        vSeeds.push_back(CDNSSeedData("node1.bost.link",  "node1.bost.link"));
+        vSeeds.push_back(CDNSSeedData("node2.bost.link",  "node2.bost.link"));
+        vSeeds.push_back(CDNSSeedData("node3.bost.link",  "node3.bost.link"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
@@ -145,14 +145,15 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xa1;
-        pchMessageStart[1] = 0xb7;
-        pchMessageStart[2] = 0xc3;
-        pchMessageStart[3] = 0xd5;
+
+		pchMessageStart[0] = 0x70;
+        pchMessageStart[1] = 0x35;
+        pchMessageStart[2] = 0x22;
+        pchMessageStart[3] = 0x05;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
-        vAlertPubKey = ParseHex("0444fb892fbfc368b06e46bba961ae02bac0ada68fee4bcee6f2f1c2b2a50a45383a48612d2ff678b7e77c1a5e508822302293d7ca7e7f0dcc56a7ce337677aced");
+        vAlertPubKey = ParseHex("0495c366b3dc2986b8669858743cecdcb4f0749c6c23cc1e94d77a1a5b289a2f81f3613273a2aa8c8b2ebd19caab8785492ba98c33d9336472f627f5963b65e14d");
         nDefaultPort = 19697;
-        nRPCPort = 19798;
+        nRPCPort = 19697;
         strDataDir = "testnet";
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
@@ -193,12 +194,12 @@ public:
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
         genesis.nTime = genTime;
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 496894;
+        genesis.nNonce = 1313422;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 29697;
         strDataDir = "regtest";
 //        MineGenesis(genesis); // mine the genesis block only, disable after solved
-        assert(hashGenesisBlock == uint256("0x00000adacb2c37359a3082aedf0725da3e4ca068b8dda6523e3dc56e2ab5d990"));
+        assert(hashGenesisBlock == uint256("0x00000b76f20c81ad1ac9c8a5fc14547a5f8c3305108424ffced60ccbbf09a904"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }

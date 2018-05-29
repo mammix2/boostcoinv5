@@ -17,7 +17,7 @@ DEFINES += ENABLE_WALLET
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
-CONFIG += static
+#CONFIG += static
 greaterThan(QT_MAJOR_VERSION, 4) {
     QT += widgets
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
@@ -39,8 +39,8 @@ TARGET = $$fName1$$fName2$$VERSION
         BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
         BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
 
-        OPENSSL_INCLUDE_PATH=C:/tools/openssl/x86/1.0.2-stable/include
-        OPENSSL_LIB_PATH=C:/tools/openssl/x86/1.0.2-stable/lib
+        OPENSSL_INCLUDE_PATH=C:/tools/openssl/x86/include
+        OPENSSL_LIB_PATH=C:/tools/openssl/x86/lib
 
         MINIUPNPC_INCLUDE_PATH=C:/deps/
         MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
@@ -64,8 +64,8 @@ TARGET = $$fName1$$fName2$$VERSION
         BDB_INCLUDE_PATH=C:/tools/berkeley-db/db4/x64/include
         BDB_LIB_PATH=C:/tools/berkeley-db/db4/x64/lib
 
-        OPENSSL_INCLUDE_PATH=C:/tools/openssl/x64/1.0.2-stable/include
-        OPENSSL_LIB_PATH=C:/tools/openssl/x64/1.0.2-stable/lib
+        OPENSSL_INCLUDE_PATH=C:/tools/openssl/x64/include
+        OPENSSL_LIB_PATH=C:/tools/openssl/x64/lib
 
         MINIUPNPC_INCLUDE_PATH=C:/tools/miniupnpc
         MINIUPNPC_LIB_PATH=C:/tools/miniupnpc/miniupnpc

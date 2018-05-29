@@ -20,7 +20,7 @@ packages:
 - "libpng12-dev"
 reference_datetime: "2011-01-30 00:00:00"
 remotes:
-- "url": "https://github.com/BOST/boostcoin/.git"
+- "url": "https://github.com/mammix2/boostcoinv5/.git"
   "dir": "boostcoin"
 files:
 - "miniupnpc-1.6.tar.gz"
