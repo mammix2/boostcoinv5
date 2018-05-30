@@ -997,22 +997,26 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {   
-	if (pindexBest->nHeight == 1){
-        int64_t nSubsidy = 20000000 * COIN;
+    int64_t nSubsidy;
+    if (pindexBest->nHeight < 500){
+        nSubsidy = 35000 * COIN; //Use first 500 blocks to split up Pre-mine, helps with staking later on
         return nSubsidy + nFees;
     } else {
-        int64_t nSubsidy = 0 * COIN;
+        nSubsidy = 0 * COIN;
         return nSubsidy + nFees;
     }
+    LogPrint("GetProofOfWorkReward() : create=%s", FormatMoney(nSubsidy).c_str(), nSubsidy);
+
 }
 
 // miner's coin stake reward
 int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = nCoinAge * POS_STAKE_REWARD / 365;
+    int64_t nSubsidy;
+    nSubsidy = nCoinAge * POS_STAKE_REWARD / 365;
+    LogPrint("creation", "GetProofOfStakeReward(): create=%s nCoinAge=%d\n", FormatMoney(nSubsidy), nCoinAge);
     return nSubsidy + nFees;
 }
-
 
 
 // ppcoin: find last block index up to pindex
@@ -1039,10 +1043,10 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
 
     int64_t nTargetSpacing = GetTargetSpacing(pindexLast->nHeight);
     int64_t nActualSpacing = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
-//    if (IsProtocolV1RetargetingFixed(pindexLast->nHeight)) {
-//        if (nActualSpacing < 0)
-//            nActualSpacing = nTargetSpacing;
-//    }
+    if (IsProtocolV1RetargetingFixed(pindexLast->nHeight)) {
+        if (nActualSpacing < 0)
+            nActualSpacing = nTargetSpacing;
+    }
     if (IsProtocolV3(pindexLast->nTime)) {
         if (nActualSpacing > nTargetSpacing * 10)
             nActualSpacing = nTargetSpacing * 10;
@@ -2057,6 +2061,9 @@ bool CBlock::AcceptBlock()
 
     if (IsProofOfWork() && nHeight > Params().LastPOWBlock())
         return DoS(100, error("AcceptBlock() : reject proof-of-work at height %d", nHeight));
+
+    if (IsProofOfStake() && nHeight < Params().POS_START())
+        return DoS(100, error("AcceptBlock() : reject proof-of-stake at height %d", nHeight));
 
     // Check coinbase timestamp
     if (GetBlockTime() > FutureDrift((int64_t)vtx[0].nTime, nHeight))

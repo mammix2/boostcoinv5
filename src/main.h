@@ -59,7 +59,7 @@ inline bool IsProtocolV2(int nHeight) {
     return TestNet() || nHeight > 0; // Start new BOST chain using ProtocolV2
 }
 inline bool IsProtocolV3(int64_t nTime) {
-    return TestNet() || nTime > 0; // Start new BOST chain using ProtocolV3
+    return TestNet() || nTime > 1527627946; // Start new BOST chain using ProtocolV3
 }
 inline int64_t FutureDriftV1(int64_t nTime) {
     return nTime + 30 * 60;
