@@ -119,7 +119,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
 
-    const char* whiteLabelQSS = "QLabel { color: rgb(78,83,91); }";
+    const char* whiteLabelQSS = "QLabel { color: rgb(255,255,255); }";
     ui->labelBalance->setStyleSheet(whiteLabelQSS);
     ui->labelStake->setStyleSheet(whiteLabelQSS);
     ui->labelUnconfirmed->setStyleSheet(whiteLabelQSS);

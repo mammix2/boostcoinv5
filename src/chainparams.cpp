@@ -77,7 +77,7 @@ public:
         pchMessageStart[1] = 0x35;
         pchMessageStart[2] = 0x22;
         pchMessageStart[3] = 0x05;
-        vAlertPubKey = ParseHex("04cd446c44e90cfddbde18bcd7cd8c4aca0076954e3a60a3bb5e78316b8a6ae5609b8d0023cd80b7618f99cb9250a87e2de3a10ced08d384b56a94227a098a47c3");
+        vAlertPubKey = ParseHex("042e41c5b3e1bd4e4e34b4924a9fc7bcddfc89c3f15171f7b294a43176a99a7e0a05d62ff093d112c55eb02b64943a5e6b7000ff000978c9bed3dbdefc63c67a29");
         nDefaultPort = 9657;
         nRPCPort = 9658;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
@@ -100,12 +100,12 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = genTime;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 5726282;
+        genesis.nNonce   = 6430349;
 
         hashGenesisBlock = genesis.GetHash();
 //        MineGenesis(genesis); // mine the genesis block only, disable after solved
-        assert(hashGenesisBlock == uint256("0x00000e81cae8e8cbbf9679d53ff1df5e23062dc667a332fd121f86e68f5d25e3"));
-        assert(genesis.hashMerkleRoot == uint256("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
+        assert(hashGenesisBlock == uint256("0x000005a19a76e7e072231c067a655a5e1bd7dc62d123907498ddc18d34714e7b"));
+        assert(genesis.hashMerkleRoot == uint256("0xe400d99d8bb97f33740c5958ce5a6a6309de9ff1116402dc6575f0a838f53d1f"));
 
         vSeeds.push_back(CDNSSeedData("node1.bost.link",  "node1.bost.link"));
         vSeeds.push_back(CDNSSeedData("node2.bost.link",  "node2.bost.link"));
@@ -160,16 +160,16 @@ public:
         pchMessageStart[2] = 0x22;
         pchMessageStart[3] = 0x05;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
-        vAlertPubKey = ParseHex("0495c366b3dc2986b8669858743cecdcb4f0749c6c23cc1e94d77a1a5b289a2f81f3613273a2aa8c8b2ebd19caab8785492ba98c33d9336472f627f5963b65e14d");
+        vAlertPubKey = ParseHex("0427cdb11f72ac362216ffbbb400fb8df532cad01b715c565d6e45342c0a15c6b6a089c8d849098effb5c849a2b960c4572f29c60beb128ccf7a7ff0f653393491");
         nDefaultPort = 19657;
         nRPCPort = 19657;
         strDataDir = "testnet";
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 1908795;
+        genesis.nNonce = 8097501;
 //        MineGenesis(genesis); // mine the genesis block only, disable after solved
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb"));
+        assert(hashGenesisBlock == uint256("0x000008e27afb9e851985760364c6c359f9cc24a63f693a88a7bef09f228ac570"));
 
 //        vFixedSeeds.clear();
 //        vSeeds.clear();
@@ -203,12 +203,12 @@ public:
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
         genesis.nTime = genTime;
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 1313422;
+        genesis.nNonce = 2793851;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 29657;
         strDataDir = "regtest";
 //        MineGenesis(genesis); // mine the genesis block only, disable after solved
-        assert(hashGenesisBlock == uint256("0x00000b76f20c81ad1ac9c8a5fc14547a5f8c3305108424ffced60ccbbf09a904"));
+        assert(hashGenesisBlock == uint256("0x00000f372f526062eadf9ebe6d9969d5c11e22c39fe7281421fe395d8d483f2b"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }

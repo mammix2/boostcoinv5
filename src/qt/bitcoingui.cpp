@@ -83,13 +83,13 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
 #ifdef Q_OS_MAC
     resize(960, 595);
-    setWindowTitle(tr("boostcoin - MacOS wallet"));
+    setWindowTitle(tr("MyBoost - MacOS wallet"));
 #elif _WIN32
     resize(900, 580);
-    setWindowTitle(tr("boostcoin - Windows wallet"));
+    setWindowTitle(tr("MyBoost - Windows wallet"));
 #else
     resize(1000, 630);
-    setWindowTitle(tr("boostcoin - Linux wallet"));
+    setWindowTitle(tr("MyBoost - Linux wallet"));
 #endif
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
@@ -378,7 +378,6 @@ void BitcoinGUI::createToolBars()
         header->setMinimumSize(150, 150);
         header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         header->setPixmap(QPixmap(":/images/header"));
-        header->setStyleSheet("QLabel {background-color: #ffffff;}");
         header->setMaximumSize(150,150);
         header->setScaledContents(true);
 	toolbar->addWidget(header);
@@ -610,7 +609,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
         progressBarLabel->setText(tr(clientModel->isImporting() ? "Importing blocks..." : "Synchronizing with network..."));
         progressBarLabel->setVisible(true);
-        progressBarLabel->setStyleSheet("QLabel { color: #ffffff; }");
+//        progressBarLabel->setStyleSheet("QLabel { color: #ffffff; }");
         progressBar->setFormat(tr("%1 behind").arg(timeBehindText));
         progressBar->setMaximum(totalSecs);
         progressBar->setValue(totalSecs - secs);
