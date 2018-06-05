@@ -58,7 +58,7 @@ private:
 
     QToolBar *toolbar;
 
-    QStackedWidget *centralStackedWidget;
+    QStackedWidget *centralWidget;
 
     OverviewPage *overviewPage;
     QWidget *transactionsPage;
@@ -111,7 +111,7 @@ private:
     /** Create the menu bar and sub-menus. */
     void createMenuBar();
     /** Create the toolbars */
-    void createToolBars();
+    void createToolBars(QToolBar *toolbar);
     /** Create system tray (notification) icon */
     void createTrayIcon();
 
