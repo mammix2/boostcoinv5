@@ -1,4 +1,4 @@
-// Copyright (c) 2013 boostcoin Developers
+// Copyright (c) 2014-2017  boostcoin Developers
 
 #ifndef PBKDF2_H
 #define PBKDF2_H

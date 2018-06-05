@@ -1,4 +1,4 @@
-// Copyright (c) 2013 boostcoin Developers
+// Copyright (c) 2014-2017  boostcoin Developers
 
 #include <string.h>
 #include "pbkdf2.h"
