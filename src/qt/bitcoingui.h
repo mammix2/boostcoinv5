@@ -45,6 +45,7 @@ public:
         functionality.
     */
     void setWalletModel(WalletModel *walletModel);
+    bool enableWallet;
 
 protected:
     void changeEvent(QEvent *e);

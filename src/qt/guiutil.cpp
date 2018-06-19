@@ -465,184 +465,104 @@ void SetThemeQSS(QApplication& app)
 
 #ifdef Q_OS_MAC
 // Mac OS styles here
-    app.setStyleSheet(
-        "QMainWindow    { background-color: rgb(51,47,202); }"
-        "QFrame         { border: none; }"
-        "QFrame#SendCoinsEntry  { background-color: rgba(0,0,0,0); color: rgb(0,0,0); }"
-        "QMenu {font-family: Arial,Gadget,sans-serif; } "
-        "QPushButton    { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; background: rgb(43,196,237); color: white; padding: 3px; margin: 4px; }"
-        "QPushButton:hover  { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; background: rgb(43,196,237); color: white; padding: 3px; margin: 4px; }"
-        "QPushButton:disabled { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(100,100,100);}"
-        "QTabBar::tab   { color: rgb(51,47,202); border: 1px solid rgb(255,255,100); border-bottom: none; padding: 5px; }"
-        "QTabBar::tab:selected  { background: rgb(43,196,237); }"
-        "QTabBar::tab:!selected { background: rgb(255,255,255); margin-top: 2px; }"
-        "QToolButton    { background: rgb(51,47,202); color: rgb(255,255,252); border: none; border-left-color: rgb(51,47,202); border-left-style: solid; border-left-width: 6px; margin-top: 8px; margin-bottom: 8px; font-size: 12px;}"
-        "QToolButton:hover { color: rgb(43,196,237); border: none; border-left-color: rgb(43,196,237); border-left-style: solid; border-left-width: 6px; }"
-        "QToolButton:disabled { color: rgb(100,100,100);}"
-        "QDoubleSpinBox { background: rgb(51,47,202); color: rgb(255,255,255); border-color: rgb(255,255,253); }"
-        "QLineEdit, QTextEdit {font-family: Arial,Gadget,sans-serif; border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202); border-color: rgb(255,255,253);}"
-        "QPlainTextEdit { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QMenuBar          { background: rgb(255,255,255); color: rgb(233,233,233); }"
-        "QMenu       { background: rgb(255,255,255); color: rgb(233,233,233); }"
-        "QMenuBar::item { background: rgb(28.83.122); color: rgb(233,233,233);}"
-        "QMenu::item:selected { background: rgb(43,196,237); }"
-        "QMenuBar::item:selected { background: rgb(43,196,237); }"
-        "QLabel         { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255); }"
-        "QScrollBar     { color: rgb(255,255,255); }"
-        "QCheckBox      { color: rgb(255,255,255); }"
-        "QRadioButton   { color: rgb(255,255,255); }"
-        "QListView      { font-family: Arial,Gadget,sans-serif; color: rgb(0,0,0); show-decoration-selected: 1; }"
-        "QTabWidget::pane { border: 1px solid rgb(255,255,100); }"
-        "QProgressBar   { color: rgb(51,47,202); border-color: rgb(255,255,255); }"
-        "QProgressBar::chunk { background: rgb(43,196,237); }"
-        "QTreeView       { background-color: rgba(0,0,0,0); }"
-        "QTreeView::item { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QTreeView::item:selected { background-color: rgba(0,0,0,0); }"
-        "QTableView     { font-family: Arial,Gadget,sans-serif; font-size: 11px; gridline-color: black; background-color: transparent; color: rgb(255,255,255); selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
-        "QTableView::item {border-top : 1px solid black; border-bottom : 1px solid black;}"
-        "QScrollArea#scrollArea { background-color: rgba(0,0,0,0);}"
-        "QHeaderView::section { font-family: Arial,Gadget,sans-serif;  padding: 1px; background: rgb(255,255,255); color: rgb(51,47,202); }"
-        "QHeaderView { font-family: Arial,Gadget,sans-serif;  padding: 1px; background: rgb(255,255,255);}"
-        "QToolBar       {background: rgb(51,47,202); border: 1px solid white;}"
-        "QWidget#transactionsPage { background-color: rgba(0,0,0,0);}"
-        "QWidget#scrollAreaWidgetContents { background-color: rgba(0,0,0,0);}"
-        "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(51,47,202);  }"
-        "QSpinBox {font-family: Arial, Gadget,sans-serif; border-radius: 0px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QComboBox {font-family: Arial, Gadget,sans-serif; border-radius: 0px; color: rgb(255,255,255); background: rgb(51,47,202); min-width: 6em; }"
-        "QComboBox QAbstractItemView  {font-family: Arial ,Gadget,sans-serif; border-radius: 0px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QVBoxLayout { background: rgb(255,255,255);}"
-        "QLabel#overviewpage_spendable_label, QLabel#overviewpage_stake_label, QLabel#overviewpage_unconfirmed_label, QLabel#overviewpage_immature_label, QLabel#overviewpage_total_label, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#labelTotal {font-family: Arial,Gadget,sans-serif;  font-size: 12px;}"
- );
-}
+
 
 #elif _WIN32
 // Windows styles here
     app.setStyleSheet(
-        "QMainWindow    { background-color: rgb(44,45,128); }"
-        "QDialog    { background-color: rgb(51,47,202); }"
-        "QFrame         { border: none; }"
-        "QFrame#SendCoinsEntry  { background-color: rgba(0,0,0,0); color: rgb(51,47,202); }"
-        "QMenu {font-family: Arial,Gadget,sans-serif; }"
+        "QMainWindow            { background-color: rgb(44,45,128) ;}"
+        "QDialog                { background-color: rgb(44,45,128) ;}"
+        "QFrame                 { border: none ;}"
+        "QFrame#SendCoinsEntry  { background-color: rgba(0,0,0,0); color: rgb(44,45,128) ;}"
+        "QMenu                  { font-family: Arial,Gadget,sans-serif ;}"
 
-                "QWidget#widget{ padding: 2px; margin: 3px; background-color: rgb(208,224,239); color: rgb(44,45,128); border-radius: 8px; padding: 4px;}"
+        "QWidget#widget           { padding: 2px; margin: 3px; background-color: rgb(208,224,239); color: rgb(44,45,128); border-radius: 8px; padding: 4px ;}"
+        "QWidget#widget_2         { padding: 2px; margin: 3px; border: 2px solid rgb(43,196,237); color: rgb(255,255,255); border-radius: 8px; padding: 4px ;}"
 
-                "QPushButton    { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 2px solid rgb(51,47,202); border-radius: 10px; padding: 3px;  margin: 6px; margin-left: 12px; margin-right: 12px;}"
-                "QPushButton:hover { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 2px solid rgb(43,196,237); border-radius: 10px; padding: 3px;  margin: 6px; margin-left: 12px; margin-right: 12px; }"
-                "QPushButton:disabled { color: rgb(100,100,100);}"
+        "QPushButton            { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 2px solid rgb(51,47,202); border-radius: 4px; padding: 3px;  margin: 6px; margin-left: 12px; margin-right: 12px ;}"
+        "QPushButton:hover      { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 2px solid rgb(43,196,237); border-radius: 4px; padding: 3px;  margin: 6px; margin-left: 12px; margin-right: 12px ;}"
+        "QPushButton:disabled   { color: rgb(150,150,150) ;}"
 
+        "QToolBar               { background-color: rgb(51,47,202) ;}"
 
-                "QToolBar       {background-color: rgb(51,47,202); }"
+        "QTabBar::tab           { color: rgb(51,47,202); border: 1px solid rgb(255,255,255); border-bottom: none; padding: 5px ;}"
+        "QTabBar::tab:selected  { background: rgb(43,196,237) ;}"
+        "QTabBar::tab:!selected { background: rgb(255,255,255); margin-top: 2px ;}"
 
-        "QTabBar::tab   { color: rgb(51,47,202); border: 1px solid rgb(255,255,255); border-bottom: none; padding: 5px; }"
-        "QTabBar::tab:selected  { background: rgb(43,196,237); }"
-        "QTabBar::tab:!selected { background: rgb(255,255,255); margin-top: 2px; }"
+        "QToolButton            { font-size: 14px; font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(51,47,202); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
+        "QToolButton:hover      { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
+        "QToolButton:pressed    { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(43,196,237); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
+        "QToolButton:checked    { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
+        "QToolButton:disabled   { color: rgb(150,150,150) ;}"
 
-                "QToolButton    { font-size: 14px; font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(51,47,202); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px;}"
-                "QToolButton:hover { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px; }"
-                "QToolButton:pressed { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(43,196,237); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px; }"
-                "QToolButton:checked { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px; }"
-                "QToolButton:disabled { color: rgb(150,150,150);}"
+        "QDoubleSpinBox         { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
-        "QDoubleSpinBox { background: rgb(51,47,202); color: rgb(255,255,255); border-color: rgb(255,255,253); }"
-        "QLineEdit      { background: rgb(51,47,202); color: rgb(255,255,255); border-color: rgb(255,255,253); }"
-        "QTextEdit      { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QPlainTextEdit { background: rgb(51,47,202); color: rgb(255,255,255); }"
+        "QLineEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
-        "QMenu       { background: rgb(255,255,255); color: rgb(51,47,202); }"
-        "QMenu::item:selected { background: rgb(43,196,237); color: rgb(255,255,255);}"
+        "QTextEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+        "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(44,45,128); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
-        "QMenuBar          { background: rgb(255,255,255); color: rgb(51,47,202); }"
-        "QMenuBar::item { background: rgb(255,255,255); color: rgb(51,47,202);}"
-        "QMenuBar::item:selected { background: rgb(43,196,237); }"
+        "QPlainTextEdit         { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
-        "QLabel         { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255); }"
-        "QLabel::header { border-color: rgb(51,47,202); }"
-        "QLabel::progressBarLabel { color: rgb(255,255,255); }"
-        "QScrollBar     { color: rgb(255,255,255); }"
-        "QCheckBox      { color: rgb(255,255,255); }"
-        "QRadioButton   { color: rgb(255,255,255); }"
-        "QListView      { font-family: Arial,Gadget,sans-serif; color: rgb(0,0,0); show-decoration-selected: 1; }"
-        "QTabWidget::pane { border: 2px solid rgb(255,255,255); border: 2px solid rgb(255,255,255);}"
-        "QProgressBar   { color: rgb(51,47,202); border-color: rgb(255,255,255); }"
-        "QProgressBar::chunk { background: rgb(43,196,237); }"
-        "QTreeView       { background-color: rgba(0,0,0,0); }"
-        "QTreeView::item { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QTreeView::item:selected { background-color: rgba(0,0,0,0); }"
-        "QTableView     { font-family: Arial,Gadget,sans-serif; background-color: transparent; color: rgb(255,255,255); selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
-        "QScrollArea#scrollArea { background-color: rgba(0,0,0,0);}"
-        "QHeaderView::section { font-family: Arial,Gadget,sans-serif;  padding: 1px; background: rgb(255,255,255); color: rgb(51,47,202); }"
-        "QHeaderView { font-family: Arial,Gadget,sans-serif;  padding: 1px; background: rgb(255,255,255);}"
+        "QMenu                  { background: rgb(255,255,255); color: rgb(51,47,202) ;}"
+        "QMenu::item:selected   { background: rgb(43,196,237); color: rgb(255,255,255) ;}"
 
-        "QWidget#transactionsPage { background-color: rgba(0,0,0,0);}"
-        "QWidget#scrollAreaWidgetContents { background-color: rgba(0,0,0,0);}"
-        "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(51,47,202);  }"
-        "QSpinBox {font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QComboBox {font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QComboBox QAbstractItemView  {font-family: Arial,Gadget,sans-serif;   border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QVBoxLayout { background: rgb(255,255,255);}"
-        "QLabel#overviewpage_spendable_label, QLabel#overviewpage_stake_label, QLabel#overviewpage_unconfirmed_label, QLabel#overviewpage_immature_label, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 12px; color: rgb(51,47,202)}"
-        "QLabel#label_MyWallet {color: rgb(51,47,202)}"
+        "QMenuBar               { background: rgb(255,255,255); color: rgb(51,47,202) ;}"
+        "QMenuBar::item         { background: rgb(255,255,255); color: rgb(51,47,202) ;}"
+        "QMenuBar::item:selected { background: rgb(43,196,237) ;}"
 
-                "QLabel#overviewpage_total_label, QLabel#labelTotal {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202)}"
+        "QLabel                 { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255) ;}"
+        "QLabel::header         { border-color: rgb(51,47,202) ;}"
+        "QLabel::progressBarLabel { color: rgb(255,255,255) ;}"
 
-                "QListView#listTransactions { color: rgb(255,255,255);  border: 2px solid rgb(43,196,237); border-radius: 8px; padding: 4px;}"
+        "QScrollBar             { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
+        "QCheckBox              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+
+        "QRadioButton           { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+
+        "QTabWidget::tab-bar    { border-radius: 2px ;}"
+        "QTabWidget::pane       { border: 2px solid rgb(43,196,237); border-radius: 4px ;}"
+
+        "QProgressBar           { font-weight: bold; color: rgb(51,47,202); border-color: rgb(255,255,255); border-radius: 4px ;}"
+        "QProgressBar::chunk    { background: rgb(43,196,237) ;}"
+
+        "QTreeView              { background-color: rgba(0,0,0,0) ;}"
+        "QTreeView::item        { background: rgb(51,47,202); color: rgb(255,255,255) ;}"
+        "QTreeView::item:selected { background-color: rgba(0,0,0,0) ;}"
+
+        "QTableView             { font-family: Arial,Gadget,sans-serif; background-color: transparent; color: rgb(255,255,255); selection-background-color: rgb(90,47,202) ;}"
+
+        "QScrollArea#scrollArea { background-color: rgba(0,0,0,0) ;}"
+
+        "QHeaderView::section   { font-family: Arial,Gadget,sans-serif;  padding: 1px; background: rgb(255,255,255); color: rgb(51,47,202) ;}"
+        "QHeaderView            { font-family: Arial,Gadget,sans-serif;  padding: 1px; background: rgb(255,255,255) ;}"
+
+        "QWidget#transactionsPage { background-color: rgba(0,0,0,0) ;}"
+        "QWidget#scrollAreaWidgetContents { background-color: rgba(0,0,0,0) ;}"
+
+        "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(44,45,128) ;}"
+
+        "QSpinBox               { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
+        "QComboBox              { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
+        "QComboBox QAbstractItemView  {font-family: Arial,Gadget,sans-serif;   border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
+
+        "QVBoxLayout            { background: rgb(255,255,255) ;}"
+
+        "QLabel#overviewpage_spendable_label, QLabel#overviewpage_stake_label, QLabel#overviewpage_unconfirmed_label, QLabel#overviewpage_immature_label, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 12px; color: rgb(51,47,202);}"
+        "QLabel#label_MyWallet {color: rgb(51,47,202) ;}"
+        "QLabel#overviewpage_total_label, QLabel#labelTotal {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202) ;}"
+        "QLabel#lblAmount, QLabel#lblLabel, QLabel#lblMessage {font-weight: bold; font-family: Arial,Gadget,sans-serif; color: rgb(51,47,202) ;}"
+
+        "QListView              { font-family: Arial,Gadget,sans-serif; border-color: rgb(208,224,239) color: rgb(255,255,255); show-decoration-selected: 1 ;}"
 
     );
 }
 
 #else
 // Linux styles here
-    app.setStyleSheet(
-        "QMainWindow    { background-color: rgb(51,47,202); }"
-        "QFrame         { border: none; }"
-        "QFrame#SendCoinsEntry  { background-color: rgba(0,0,0,0); color: rgb(51,47,202); }"
-        "QMenu {font-family: Arial,Gadget,sans-serif; } "
-        "QPushButton    { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; background: rgb(43,196,237); color: white; padding: 3px; margin: 4px; }"
-        "QPushButton:hover  { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; background: rgb(43,196,237); color: white; padding: 3px; margin: 4px; }"
-        "QPushButton:disabled { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(100,100,100);}"
-        "QTabBar::tab   { color: rgb(51,47,202); border: 1px solid rgb(255,255,100); border-bottom: none; padding: 5px; }"
-        "QTabBar::tab:selected  { background: rgb(43,196,237); }"
-        "QTabBar::tab:!selected { background: rgb(255,255,255); margin-top: 2px; }"
-        "QToolButton    { background: rgb(51,47,202); color: rgb(255,255,252); border: none; border-left-color: rgb(51,47,202); border-left-style: solid; border-left-width: 6px; margin-top: 8px; margin-bottom: 8px; font-size: 12px; }"
-        "QToolButton:hover { color: rgb(43,196,237); border: none; border-left-color: rgb(43,196,237); border-left-style: solid; border-left-width: 6px; }"
-        "QToolButton:disabled { color: rgb(100,100,100);}"
-        "QDoubleSpinBox { background: rgb(51,47,202); color: rgb(255,255,255); border-color: rgb(255,255,253); }"
-        "QLineEdit      { background: rgb(51,47,202); color: rgb(255,255,255); border-color: rgb(255,255,253); }"
-        "QTextEdit      { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QPlainTextEdit { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QMenu       { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QMenu::item:selected { background: rgb(43,196,237); }"
-        "QMenuBar          { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QMenuBar::item { background: rgb(43,196,237); color: rgb(255,255,255);}"
-        "QMenuBar::item:selected { background: rgb(43,196,237); }"
-        "QLabel         { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255); }"
-        "QScrollBar     { color: rgb(255,255,255); }"
-        "QCheckBox      { color: rgb(255,255,255); }"
-        "QRadioButton   { color: rgb(255,255,255); }"
-        "QListView      { font-family: Arial,Gadget,sans-serif; color: rgb(0,0,0); show-decoration-selected: 1; }"
-        "QTabWidget::pane { border: 1px solid rgb(255,255,100); }"
-        "QProgressBar   { color: rgb(51,47,202); border-color: rgb(255,255,255); }"
-        "QProgressBar::chunk { background: rgb(43,196,237); }"
-        "QTreeView       { background-color: rgba(0,0,0,0); }"
-        "QTreeView::item { background: rgb(51,47,202); color: rgb(255,255,255); }"
-        "QTreeView::item:selected { background-color: rgba(0,0,0,0); }"
-        "QTableView     { font-family: Arial,Gadget,sans-serif;    background-color: transparent; color: rgb(255,255,255); selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
-        "QScrollArea#scrollArea { background-color: rgba(0,0,0,0);}"
-        "QHeaderView::section { font-family: Arial,Gadget,sans-serif;  padding: 1px; background: rgb(255,255,255); color: rgb(51,47,202); }"
-        "QHeaderView { font-family: Arial,Gadget,sans-serif;  padding: 1px; background: rgb(255,255,255);}"
-        "QToolBar       {background-color: rgba(0,0,0,0); }"
-        "QWidget#transactionsPage { background-color: rgba(0,0,0,0);}"
-        "QWidget#scrollAreaWidgetContents { background-color: rgba(0,0,0,0);}"
-        "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(51,47,202);  }"
-        "QSpinBox {font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QComboBox {font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QComboBox QAbstractItemView  {font-family: Arial,Gadget,sans-serif;   border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QVBoxLayout { background: rgb(255,255,255);}"
-        "QLineEdit, QTextEdit {font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202); }"
-        "QLabel#overviewpage_spendable_label, QLabel#overviewpage_stake_label, QLabel#overviewpage_unconfirmed_label, QLabel#overviewpage_immature_label, QLabel#overviewpage_total_label, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#labelTotal {font-family: Arial,Gadget,sans-serif;  font-size: 12px;}"
- );
-}
+
+
 #endif
 
 } // namespace GUIUtil

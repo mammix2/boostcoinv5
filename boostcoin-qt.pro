@@ -476,8 +476,7 @@ OTHER_FILES += \
     doc/*.txt \
     doc/README README.md \
     res/bitcoin-qt.rc \
-    src/makefile.* \
-    src/qt/res/styles/style.qss
+    src/makefile.*
 
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {

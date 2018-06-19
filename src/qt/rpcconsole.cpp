@@ -316,11 +316,11 @@ void RPCConsole::clear()
     // Set default style sheet
     ui->messagesWidget->document()->setDefaultStyleSheet(
                 "table { }"
-                "td.time { color: #4e535b; padding-top: 3px; } "
+                "td.time { color: rgb(208,224,239); padding-top: 3px; } "
                 "td.message { font-family: Monospace; font-size: 12px; } "
-                "td.cmd-request { color: #244a82; } "
+                "td.cmd-request { color: rgb(208,224,239); } "
                 "td.cmd-error { color: red; } "
-                "b { color: #244a82; } "
+                "b { color: rgb(255,255,255); } "
                 );
 
     message(CMD_REPLY, (tr("Welcome to the boostcoin RPC console.") + "<br>" +

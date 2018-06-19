@@ -41,6 +41,9 @@
        <item>
         <widget class="QWidget" name="widget" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>6</number>
+          </property>
           <property name="leftMargin">
            <number>9</number>
           </property>
@@ -109,7 +112,7 @@
              <number>12</number>
             </property>
             <property name="leftMargin">
-             <number>25</number>
+             <number>16</number>
             </property>
             <property name="topMargin">
              <number>6</number>
@@ -264,7 +267,7 @@
                <string>Total:</string>
               </property>
               <property name="indent">
-               <number>10</number>
+               <number>12</number>
               </property>
              </widget>
             </item>
@@ -366,17 +369,26 @@
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <property name="rightMargin">
+        <number>2</number>
+       </property>
        <item>
         <widget class="QWidget" name="widget_2" native="true">
          <layout class="QVBoxLayout" name="verticalLayout">
           <property name="topMargin">
-           <number>6</number>
+           <number>15</number>
           </property>
           <item>
            <widget class="QListView" name="listTransactions">
             <property name="styleSheet">
-             <string notr="true">QListView { 
-	background: transparent; 
+             <string notr="true">QListView {
+	background-color: transparent;
 }</string>
             </property>
             <property name="frameShape">
