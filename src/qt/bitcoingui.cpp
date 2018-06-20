@@ -90,7 +90,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
 
 #ifdef Q_OS_MAC
-    resize(960, 595);
+    resize(980, 610);
     setWindowTitle(tr("MyBoost - MacOS wallet"));
 #elif _WIN32
     resize(980, 610);
