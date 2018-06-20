@@ -93,7 +93,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     resize(960, 595);
     setWindowTitle(tr("MyBoost - MacOS wallet"));
 #elif _WIN32
-    resize(900, 580);
+    resize(980, 610);
     setWindowTitle(tr("MyBoost - Windows wallet"));
 #else
     resize(1000, 630);
@@ -240,31 +240,31 @@ void BitcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(tr("&Overview"), this);
+    overviewAction = new QAction(tr("&OVERVIEW"), this);
     overviewAction->setToolTip(tr("Show general overview of wallet"));
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-    sendCoinsAction = new QAction(tr("&Send coins"), this);
+    sendCoinsAction = new QAction(tr("&SEND COINS"), this);
     sendCoinsAction->setToolTip(tr("Send coins to a BoostCoin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
-    receiveCoinsAction = new QAction(tr("&Receive coins"), this);
+    receiveCoinsAction = new QAction(tr("&RECEIVE COINS"), this);
     receiveCoinsAction->setToolTip(tr("Show the list of addresses for receiving payments"));
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(receiveCoinsAction);
 
-    historyAction = new QAction(tr("&Transactions"), this);
+    historyAction = new QAction(tr("&TRANSACTIONS"), this);
     historyAction->setToolTip(tr("Browse transaction history"));
     historyAction->setCheckable(true);
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
-    addressBookAction = new QAction(tr("&Address Book"), this);
+    addressBookAction = new QAction(tr("&ADDRESS BOOK"), this);
     addressBookAction->setToolTip(tr("Edit the list of stored addresses and labels"));
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
@@ -285,7 +285,7 @@ void BitcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About BoostCoin"), this);
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About MyBoost Wallet"), this);
     aboutAction->setToolTip(tr("Show information about BoostCoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
 
@@ -314,7 +314,7 @@ void BitcoinGUI::createActions()
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
 
-    exportAction = new QAction(tr("&Export..."), this);
+    exportAction = new QAction(tr("&EXPORT"), this);
     exportAction->setToolTip(tr("Export the data in the current tab to a file"));
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setToolTip(tr("Open debugging and diagnostic console"));

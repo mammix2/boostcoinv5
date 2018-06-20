@@ -436,6 +436,7 @@ QVariant TransactionTableModel::txStatusDecoration(const TransactionRecord *wtx)
     switch(wtx->status.status)
     {
     case TransactionStatus::OpenUntilBlock:
+        return QColor(255,0,0);
     case TransactionStatus::OpenUntilDate:
         return QColor(64,64,255);
     case TransactionStatus::Offline:
@@ -464,7 +465,7 @@ QVariant TransactionTableModel::txStatusDecoration(const TransactionRecord *wtx)
     case TransactionStatus::NotAccepted:
         return QIcon(":/icons/transaction_0");
     }
-    return QColor(0,0,0);
+    return QColor(255,255,0);
 }
 
 QString TransactionTableModel::formatTooltip(const TransactionRecord *rec) const
@@ -540,7 +541,7 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
         }
         if(index.column() == Amount && rec->type != TransactionRecord::Generated && (rec->credit+rec->debit) > 0)
         {
-            return QColor(0, 128, 0);
+            return QColor(255, 128, 0);
         }
         if(index.column() == ToAddress)
         {

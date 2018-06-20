@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>659</width>
-    <height>468</height>
+    <width>783</width>
+    <height>594</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,6 +33,12 @@
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="topMargin">
@@ -56,7 +62,8 @@
              <widget class="QLabel" name="label_MyWallet">
               <property name="font">
                <font>
-                <pointsize>13</pointsize>
+                <family>Tw Cen MT</family>
+                <pointsize>18</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -64,10 +71,18 @@
               <property name="text">
                <string>My Wallet</string>
               </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+              </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="labelWalletStatus">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
               <property name="toolTip">
                <string>The displayed information may be out of date. Your wallet automatically synchronizes with the boostcoin network after a connection is established, but this process has not completed yet.</string>
               </property>
@@ -78,7 +93,7 @@
                <string notr="true">(out of sync)</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
               </property>
              </widget>
             </item>
@@ -95,6 +110,44 @@
               </property>
              </spacer>
             </item>
+            <item>
+             <widget class="QLabel" name="wallet_logo2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="../bitcoin.qrc">:/images/wallet_logo2</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <property name="indent">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>35</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </item>
           <item>
@@ -103,36 +156,46 @@
              <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
             </property>
             <property name="labelAlignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
             <property name="horizontalSpacing">
              <number>12</number>
             </property>
             <property name="verticalSpacing">
-             <number>12</number>
+             <number>7</number>
             </property>
             <property name="leftMargin">
-             <number>16</number>
+             <number>65</number>
             </property>
             <property name="topMargin">
-             <number>6</number>
+             <number>25</number>
             </property>
             <property name="rightMargin">
              <number>10</number>
             </property>
             <property name="bottomMargin">
-             <number>12</number>
+             <number>25</number>
             </property>
             <item row="0" column="0">
              <widget class="QLabel" name="overviewpage_spendable_label">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
               <property name="text">
                <string>Spendable:</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="indent">
-               <number>-1</number>
+               <number>0</number>
               </property>
              </widget>
             </item>
@@ -140,6 +203,7 @@
              <widget class="QLabel" name="labelBalance">
               <property name="font">
                <font>
+                <pointsize>12</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -154,10 +218,33 @@
                <string notr="true">0 BOST</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="indent">
+               <number>25</number>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="overviewpage_stake_label">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Stake:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="indent">
+               <number>0</number>
               </property>
              </widget>
             </item>
@@ -165,6 +252,7 @@
              <widget class="QLabel" name="labelStake">
               <property name="font">
                <font>
+                <pointsize>12</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -179,7 +267,10 @@
                <string notr="true">0 BOST</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="indent">
+               <number>25</number>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -188,8 +279,18 @@
             </item>
             <item row="2" column="0">
              <widget class="QLabel" name="overviewpage_unconfirmed_label">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Unconfirmed:</string>
+              </property>
+              <property name="indent">
+               <number>0</number>
               </property>
              </widget>
             </item>
@@ -197,6 +298,7 @@
              <widget class="QLabel" name="labelUnconfirmed">
               <property name="font">
                <font>
+                <pointsize>12</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -211,7 +313,10 @@
                <string notr="true">0 BOST</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="indent">
+               <number>25</number>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -220,8 +325,18 @@
             </item>
             <item row="3" column="0">
              <widget class="QLabel" name="overviewpage_immature_label">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Immature:</string>
+              </property>
+              <property name="indent">
+               <number>0</number>
               </property>
              </widget>
             </item>
@@ -229,6 +344,7 @@
              <widget class="QLabel" name="labelImmature">
               <property name="font">
                <font>
+                <pointsize>12</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -240,7 +356,10 @@
                <string notr="true">0 BOST</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="indent">
+               <number>25</number>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -258,16 +377,16 @@
              <widget class="QLabel" name="overviewpage_total_label">
               <property name="font">
                <font>
-                <pointsize>10</pointsize>
-                <weight>50</weight>
-                <bold>false</bold>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
-               <string>Total:</string>
+               <string>TOTAL</string>
               </property>
               <property name="indent">
-               <number>12</number>
+               <number>1</number>
               </property>
              </widget>
             </item>
@@ -275,7 +394,7 @@
              <widget class="QLabel" name="labelTotal">
               <property name="font">
                <font>
-                <pointsize>10</pointsize>
+                <pointsize>11</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -290,20 +409,13 @@
                <string notr="true">0 BOST</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
               <property name="indent">
-               <number>10</number>
+               <number>25</number>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="overviewpage_stake_label">
-              <property name="text">
-               <string>Stake:</string>
               </property>
              </widget>
             </item>
@@ -376,7 +488,7 @@
         <number>3</number>
        </property>
        <property name="rightMargin">
-        <number>2</number>
+        <number>8</number>
        </property>
        <item>
         <widget class="QWidget" name="widget_2" native="true">
@@ -384,12 +496,28 @@
           <property name="topMargin">
            <number>15</number>
           </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lbl_last_action">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Last Action</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QListView" name="listTransactions">
             <property name="styleSheet">
-             <string notr="true">QListView {
-	background-color: transparent;
-}</string>
+             <string notr="true"/>
             </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>

@@ -45,10 +45,11 @@
         <file alias="staking_on">res/icons/staking_on.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="about">res/images/about.png</file>
         <file alias="splash">res/images/splash3.png</file>
         <file alias="header">res/images/header.png</file>
         <file alias="wallet_logo">res/images/wallet_logo.png</file>
+        <file alias="widget-bg1">res/images/widget-bg1.png</file>
+        <file alias="wallet_logo2">res/images/wallet_logo2.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
