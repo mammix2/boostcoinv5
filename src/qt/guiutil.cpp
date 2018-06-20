@@ -558,6 +558,7 @@ void SetThemeQSS(QApplication& app)
 
 
     );
+}
 
 #elif _WIN32
 // Windows styles here
@@ -751,7 +752,7 @@ void SetThemeQSS(QApplication& app)
 
 
     );
-
+}
 #endif
 
 } // namespace GUIUtil
