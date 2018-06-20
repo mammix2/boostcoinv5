@@ -485,7 +485,7 @@ void SetThemeQSS(QApplication& app)
         "QTabBar::tab:selected  { background: rgb(43,196,237) ;}"
         "QTabBar::tab:!selected { background: rgb(255,255,255); margin-top: 2px ;}"
 
-        "QToolButton            { font-size: 14px; font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(51,47,202); border-radius: 10px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
+        "QToolButton            { font-size: 14px; font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(51,47,202); border-radius: 20px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
         "QToolButton:hover      { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 20px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
         "QToolButton:pressed    { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(43,196,237); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 20px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
         "QToolButton:checked    { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 20px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
